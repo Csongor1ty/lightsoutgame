@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Lights out! by Csongor Tarjanyi (ALEV84)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+<div id="game-container">
+    <audio autoplay loop id="backgroundmusic" src="/audio/backgroundsong.mp3" controls>
+        <p>A böngésződ nem támogatja az audio elementet.</p>
+    </audio>
+    <h1 id="title">Lights out!</h1>
+    <div id="content" class="grid-container">
+    <div id = "menu" class="grid-item">
+        <div id="switchOn" class="switchCell">Felkapcsol</div>
+        <div id="switchOff" class="switchCell">Lekapcsol</div>
+        <div id="mapSelector">
+            <h3>Válassz pályát:</h3>
+            <table id="mapTable">
+                <tr>
+                    <td class="mapCell">1</td>
+                    <td class="mapCell">2</td>
+                    <td class="mapCell">3</td>
+                </tr>
+                <tr>
+                    <td class="mapCell">4</td>
+                    <td class="mapCell">5</td>
+                    <td class="mapCell">6</td>
+                </tr>
+            </table>
+        </div>
+    <div id = "timer">
+    </div>
+    <div id = "stepsCounter">
+    </div>
+        <button id="helpButton">Megoldás</button>
+        <div id="scoreboard">
+            <h3>Eredménytábla</h3>
+            <h4 class = "map-heading">1. pálya</h4>
+            <ul class="score-details" id="scoreList1"></ul>
+            <h4 class = "map-heading">2. pálya</h4>
+            <ul class="score-details" id="scoreList2"></ul>
+            <h4 class = "map-heading">3. pálya</h4>
+            <ul class="score-details" id="scoreList3"></ul>
+            <h4 class = "map-heading">4. pálya</h4>
+            <ul class="score-details" id="scoreList4"></ul>
+            <h4 class = "map-heading">5. pálya</h4>
+            <ul class="score-details" id="scoreList5"></ul>
+            <h4 class = "map-heading">6. pálya</h4>
+            <ul class="score-details" id="scoreList6"></ul>
+        </div>
+    </div>
+
+<div id="lightcontainer" class="grid-item">
+    <canvas id="lightpanel" width="500" height="500"></canvas>
+</div>
+    <div class="grid-item">
+        <img src="./images/on.png" id="bulbs" alt="lightbulbs" width="50" height="100">
+    </div>
+</div>
+</div>
+<script src="js/gamelogic.js"></script>
+</body>
+</html>
